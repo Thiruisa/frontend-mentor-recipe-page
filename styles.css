@@ -1,0 +1,145 @@
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Stone-100: hsl(30, 54%, 90%);
+    --Stone-150: hsl(30, 18%, 87%);
+    --Stone-600: hsl(30, 10%, 34%);
+    --Stone-900: hsl(24, 5%, 18%);
+
+    --Brown-800: hsl(14, 45%, 36%);
+
+    --Rose-800: hsl(332, 51%, 32%);
+    --Rose-50: hsl(330, 100%, 98%);
+
+    --font-family-1: 'Young Serif', serif;
+    --font-family-2: 'Outfit', sans-serif;
+
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Stone-100);
+    color: var(--Stone-600);
+    min-height: 100vh;
+    font-family: var(--font-family-2);
+    line-height: 1.5;
+    display: grid;
+    place-content: center;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+section {
+    margin-top: 2rem;
+}
+
+h1 {
+    font-family: var(--font-family-1);
+    color: var(--Stone-900);
+    font-weight: 400;
+}
+
+h2 {
+    font-family: var(--font-family-1);
+    color: var(--Brown-800);
+}
+
+.wrapper {
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    background: var(--White);
+    max-width: 45rem;
+    padding: 1.75rem;
+    margin: 6rem 0;
+    border-radius: 1.5rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: var(--Stone-900);
+}
+
+.time-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--Brown-800);
+    margin-bottom: 0.5rem;
+}
+
+.time {
+    padding: 1.75rem;
+    border-radius: .8rem;
+    margin-top: 2rem;
+    background: var(--Rose-50);
+}
+
+li {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    border: 1px solid var(--Stone-100);
+    padding: 0.5rem;
+}
+
+tr {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+[data-cell="nutrient-value"] {
+    color: var(--Rose-800);
+    font-weight: 600;
+}
+
+hr {
+    outline: none;
+    border: none;
+    height: 1px;
+    background: var(--Stone-150);
+    margin-top: 2rem;
+}
+
+span {
+    font-weight: 700;
+}
+
+
+@media (max-width: 500px) {
+    .container {
+        margin: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    img {
+        border-radius: 0;
+    }
+
+    .content {
+        padding: 0 1.75rem;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+}
